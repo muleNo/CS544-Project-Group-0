@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/ea-project.iml" filepath="$PROJECT_DIR$/.idea/ea-project.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CS544 Project Group 0(Core Service)/ea-project-1.iml" filepath="$PROJECT_DIR$/CS544 Project Group 0(Core Service)/ea-project-1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CS544 Project Group 0(Notification Service)/Spring-Kafka-Notification-main/Spring-Kafka-Notification-main/notificationService.iml" filepath="$PROJECT_DIR$/CS544 Project Group 0(Notification Service)/Spring-Kafka-Notification-main/Spring-Kafka-Notification-main/notificationService.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,242 @@
+{
+	"info": {
+		"_postman_id": "d7ee7cac-1e6d-46e5-a0de-adc0775e6897",
+		"name": "Mule",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23053888"
+	},
+	"item": [
+		{
+			"name": "Student",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"firstName\":\"yema\",\n \"lastName\":\"star\",\n \"email\":\"silvana1@gmail.com\",\n \"studentId\":\"1234\",\n \"homeAddress\":{\n            \"country\":\"US\",\n            \"street\" : \"1000 N Street\",\n            \"stateProvince\":\"IA\",\n            \"city\":\"FAIRFIELD\",\n            \"postalCode\":\"52557\",\n            \"countryRegion\":\"IA\"},\n\"mailing\": {\n            \"country\":\"US\",\n            \"street\" : \"1000 N Street\",\n            \"stateProvince\":\"IA\",\n            \"city\":\"FAIRFIELD\",\n            \"postalCode\":\"52557\",\n            \"countryRegion\":\"IA\"}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/students",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"students"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Course",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n \"code\":\"CS544\",\n \"name\":\"Enterprise Architecture\",\n \"description\":\"Frameworks and best practices used in building large scale software systems\"\n \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/courses",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"courses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Block",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"code\" : \"2022-12A-12D\",\n    \"name\" : \"December 2022\",\n    \"semester\" : 0,\n    \"startDate\" : \"2022-12-15\",\n    \"endDate\" : \"2023-01-20\"\n    \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/blocks",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"blocks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CourseOffering",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"code\" : \"CS544-2022-12A-12D\",\n    \"course\" : 1,\n    \"faculty\": 2,\n    \"block\" : 1,\n    \"capacity\" : \"100\"\n    \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/courseOffering",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"courseOffering"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Faculity",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\" : \"Payman\",\n    \"lastName\" : \"Salek\",\n    \"email\" : \"natty@gmail.com\",\n    \"title\" : \"Professor\"\n  \n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/faculty",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"faculty"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RegistrationGroup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"students\": [\n       {\n        \"id\": 1,\n        \"firstName\": \"yema\",\n        \"lastName\": \"star\",\n        \"email\": \"silvana1@gmail.com\",\n        \"studentId\": \"1234\",\n        \"name\": null,\n        \"mailing\": {\n            \"id\": 2,\n            \"street\": \"1000 N Street\",\n            \"city\": \"FAIRFIELD\",\n            \"postalCode\": \"52557\",\n            \"stateProvince\": \"IA\",\n            \"countryRegion\": \"IA\"\n        },\n        \"homeAddress\": {\n            \"id\": 1,\n            \"street\": \"1000 N Street\",\n            \"city\": \"FAIRFIELD\",\n            \"postalCode\": \"52557\",\n            \"stateProvince\": \"IA\",\n            \"countryRegion\": \"IA\"\n        },\n        \"registrations\": [],\n        \"registrationRequests\": []\n    }\n    ],\n    \"blocks\": [\n        {\n        \"id\": 1,\n        \"code\": \"2022-12A-12D\",\n        \"name\": \"December 2022\",\n        \"semester\": \"SUMMER\",\n        \"startDate\": \"2022-12-23\",\n        \"endDate\": \"2022-01-19\",\n        \"courseOfferings\": []\n    }\n    ],\n    \"registrationEvent\": {\n        \"id\": 3,\n        \"startDate\": \"2022-12-09\",\n        \"endDate\": \"2023-01-23\",\n        \"status\": \"OPEN\",\n        \"registrationGroups\": []\n    }\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/registrationGroup",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"registrationGroup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RegistrationEvent",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"startDate\": \"2022-12-10\",\n    \"endDate\": \"2023-01-24\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/registrationEvent/1/student",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"registrationEvent",
+						"1",
+						"student"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RegistrationRequest",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[ \n    {\n    \"studentId\": 1,\n    \"courseOfferingId\" : 1,\n    \"priorityNumber\" : 1\n}\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/registrationRequest",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"registrationRequest"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
